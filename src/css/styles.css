@@ -14,6 +14,7 @@
 @import url('./reviews.css');
 @import url('./work_tougether.css');
 @import url('./covers.css');
+@import url('./modal.css');
 
 :root {
   font-family: Inter Tight;

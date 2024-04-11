@@ -1,15 +1,4 @@
-/* Reset styles */
-/* 
-body {
-  background-color: #1c1d20;
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
+/*
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -49,15 +38,6 @@ body {
   }
 }
 
-/* Десктоп (з 1440px) */
-/* @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-} */
-
 /* Стилі для мобільних пристроїв тут */
 
 @media screen and (max-width: 767px) {
@@ -68,7 +48,6 @@ body {
 
   .title-project {
     color: rgba(250, 250, 250, 0.4);
-    font-family: Inter Tight;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -76,6 +55,11 @@ body {
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 32px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
   }
 
   .swiper-slide {
@@ -145,6 +129,21 @@ body {
     gap: 12px;
   }
 
+  .s-button-prev {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    transform: rotate(180deg);
+  }
+
+  .s-button-next {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+  }
+/* 
   .swiper-button-prev {
     display: flex;
     padding: 14px;
@@ -153,20 +152,12 @@ body {
     transform: rotate(180deg);
   }
 
-/* .swiper-button-prev-disabled {
-    display: flex;
-    padding: 14px;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    color: rgba(250, 250, 250, 0.2);
-    border-radius: 60px;            transform: rotate(180deg);
-} */
-
   .swiper-button-next {
     display: flex;
     padding: 14px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
-  }
+  } */
 }
 
 /* Планшети (з 768px) */
@@ -188,6 +179,11 @@ body {
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 32px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
   }
 
   .swiper-slide {
@@ -267,7 +263,7 @@ body {
     gap: 12px;
   }
 
-  .swiper-button-prev {
+  .s-button-prev {
     display: flex;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
@@ -275,21 +271,27 @@ body {
     transform: rotate(180deg);
   }
 
-/* .swiper-button-prev-disabled {
+  .s-button-next {
     display: flex;
-    padding: 14px;
-    order: 1px solid rgba(250, 250, 250, 0.2);
-    color: rgba(250, 250, 250, 0.2);
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+  }
+
+  /* .swiper-button-prev {
+    display: flex;
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     transform: rotate(180deg);
-} */
+  }
 
   .swiper-button-next {
     display: flex;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
-  }
+  } */
 }
 
 /* Десктоп (з 1280px) */
@@ -313,8 +315,14 @@ body {
     margin-bottom: 32px;
   }
 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
   .swiper-slide {
-    display: flex;
+    display: flex !important;
+    flex-direction: row;
     justify-content: center;
     flex: none;
     order: 1;
@@ -324,7 +332,8 @@ body {
   }
 
   .discript-project {
-    background-color: #fbfbfb;border-radius: 24px 0px 0px 24px;
+    background-color: #fbfbfb;
+    border-radius: 24px 0px 0px 24px;
     padding: 64px;
   }
 
@@ -390,7 +399,17 @@ body {
     gap: 12px;
   }
 
-  .swiper-button-prev {
+  .swiper-button-next:after,
+  .swiper-container-rtl .swiper-button-prev:after {
+    content: '' !important;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-container-rtl .swiper-button-prev:after {
+    content: '' !important;
+  }
+
+  .s-button-prev {
     display: flex;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
@@ -398,16 +417,7 @@ body {
     transform: rotate(180deg);
   }
 
-/* .swiper-button-prev-disabled {
-    display: flex;
-    padding: 14px;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    color: rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    transform: rotate(180deg);
-} */
-
-  .swiper-button-next {
+  .s-button-next {
     display: flex;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);

@@ -1,0 +1,416 @@
+/* Reset styles */
+/* 
+body {
+  background-color: #1c1d20;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+/* Планшети (з 768px) */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+/* Десктоп (з 1280px) */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+/* Десктоп (з 1440px) */
+/* @media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+} */
+
+/* Стилі для мобільних пристроїв тут */
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .title-project {
+    color: rgba(250, 250, 250, 0.4);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .swiper-slide {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 32px;
+    border-radius: 24px;
+  }
+
+  .discript-project {
+    background-color: #fbfbfb;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding: 32px;
+  }
+
+  .technologies-list-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 96px;
+  }
+
+  .technologies-text {
+    display: flex;
+    padding: 13px 18px 13px 18px;
+    border: 1px solid rgba(28, 29, 32, 0.2);
+    border-radius: 60px;
+  }
+
+  .project-name {
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  .link-github-project {
+    padding: 13px 32px 13px 32px;
+    border-radius: 60px;
+    background: rgb(237, 59, 68);
+    color: #fafafa;
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .project-picture-container {
+    border-radius: 0px 0px 24px 24px;
+    background: rgb(36, 37, 39);
+    padding: 100px 16px 100px 16px;
+  }
+
+  .arrow-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .swiper-button-prev {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    transform: rotate(180deg);
+  }
+
+/* .swiper-button-prev-disabled {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    color: rgba(250, 250, 250, 0.2);
+    border-radius: 60px;            transform: rotate(180deg);
+} */
+
+  .swiper-button-next {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+  }
+}
+
+/* Планшети (з 768px) */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  /* Стилі для планшетів тут */
+
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .title-project {
+    color: rgba(250, 250, 250, 0.4);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .swiper-slide {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 64px;
+    border-radius: 24px;
+  }
+
+  .discript-project {
+    background-color: #fbfbfb;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding: 64px;
+  }
+
+  .technologies-list-project {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 164px;
+  }
+
+  .technologies-text {
+    display: flex;
+    padding: 18px 18px 18px 18px;
+    border: 1px solid rgba(28, 29, 32, 0.2);
+    border-radius: 60px;
+
+    /* Desktop_tablet/Btn_text */
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .project-name {
+    width: 494px;
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  .link-github-project {
+    padding: 18px 50px 18px 50px;
+    border-radius: 60px;
+    background: rgb(237, 59, 68);
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .project-picture-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 24px 24px;
+    background: rgb(36, 37, 39);
+    padding: 120px 45px 120px 45px;
+  }
+
+  .arrow-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .swiper-button-prev {
+    display: flex;
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    transform: rotate(180deg);
+  }
+
+/* .swiper-button-prev-disabled {
+    display: flex;
+    padding: 14px;
+    order: 1px solid rgba(250, 250, 250, 0.2);
+    color: rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    transform: rotate(180deg);
+} */
+
+  .swiper-button-next {
+    display: flex;
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+  }
+}
+
+/* Десктоп (з 1280px) */
+@media screen and (min-width: 1280px) {
+  /* Стилі для десктопу тут */
+
+  .section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .title-project {
+    color: rgba(250, 250, 250, 0.4);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 64px;
+    border-radius: 24px;
+  }
+
+  .discript-project {
+    background-color: #fbfbfb;border-radius: 24px 0px 0px 24px;
+    padding: 64px;
+  }
+
+  .technologies-list-project {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 164px;
+  }
+
+  .technologies-text {
+    display: flex;
+    padding: 18px 18px 18px 18px;
+    border: 1px solid rgba(28, 29, 32, 0.2);
+    border-radius: 60px;
+
+    /* Desktop_tablet/Btn_text */
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .project-name {
+    width: 494px;
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  .link-github-project {
+    padding: 18px 50px 18px 50px;
+    border-radius: 60px;
+    background: rgb(237, 59, 68);
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .project-picture-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 24px 24px 0px;
+    background: rgb(36, 37, 39);
+    padding: 120px 45px 120px 45px;
+  }
+
+  .arrow-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .swiper-button-prev {
+    display: flex;
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    transform: rotate(180deg);
+  }
+
+/* .swiper-button-prev-disabled {
+    display: flex;
+    padding: 14px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    color: rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    transform: rotate(180deg);
+} */
+
+  .swiper-button-next {
+    display: flex;
+    padding: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+  }
+}

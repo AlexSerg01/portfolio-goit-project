@@ -13,6 +13,7 @@
 @import url('./faq.css');
 @import url('./reviews.css');
 @import url('./work_tougether.css');
+@import url('./covers.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;

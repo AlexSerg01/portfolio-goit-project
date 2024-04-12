@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   // Optional parameters
   cssMode: true,
   spaceBetween: 30,
@@ -16,4 +16,5 @@ const swiper = new Swiper('.swiper', {
   },
   mousewheel: true,
   keyboard: true,
+  touch: true,
 });

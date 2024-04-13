@@ -3,4 +3,4 @@ function Fe(s){return s!==null&&typeof s=="object"&&"constructor"in s&&s.constru
         rotateZ(${p.rotate?n?-z:z:0}deg)
         scale(${A})
       `;if(p.slideShadows){let T=h.querySelector(".swiper-slide-shadow");T||(T=le("cards",h)),T&&(T.style.opacity=Math.min(Math.max((Math.abs(v)-.5)/.5,0),1))}h.style.zIndex=-Math.abs(Math.round(w))+f.length;const S=he(p,h);S.style.transform=E}},setTransition:f=>{const c=e.slides.map(n=>ae(n));c.forEach(n=>{n.style.transitionDuration=`${f}ms`,n.querySelectorAll(".swiper-slide-shadow").forEach(p=>{p.style.transitionDuration=`${f}ms`})}),Ee({swiper:e,duration:f,transformElements:c})},perspective:()=>!0,overwriteParams:()=>({watchSlidesProgress:!0,virtualTranslate:!e.params.cssMode})})}const Ws=[vs,ws,ys,bs,Ss,Es,xs,Ts,Ms,Cs,Ps,Ls,Is,zs,As,$s,Bs,Rs,Xs,Vs,Ys,Ns,Fs];K.use(Ws);export{K as S};
-//# sourceMappingURL=vendor-4ea312d0.js.map
+//# sourceMappingURL=vendor-bbc44077.js.map

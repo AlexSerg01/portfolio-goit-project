@@ -1,4 +1,37 @@
-// запит з бекенду
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper';
+
+// import styles bundle
+import 'swiper/css';
+
+const swiper = new Swiper('.reviews-swiper', {
+  // Optional parameters
+  cssMode: true,
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  mousewheel: true,
+  keyboard: true,
+  touch: true,
+  
+  // Віртуальні слайди
+  virtual: {
+    slides: (function () {
+      let slide = []
+      for (let i = 0; i < 10; i++) {
+        slide.push(`<div class="swiper-slide">${i}</div>`);
+      }
+      return slide;
+    }()),
+  }
+});
+
+
+// запит з бекенду=========================================================
 const reviewsList = document.getElementById('reviewsList');
 
 fetch("https://portfolio-js.b.goit.study/api/reviews")
@@ -23,4 +56,7 @@ fetch("https://portfolio-js.b.goit.study/api/reviews")
   })
   .catch((error) => console.log(error));
 
+
+
+  
   

@@ -2,7 +2,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
   background-image: url('../img/work-together-img/glass-effect-2.png');
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position-x: 290px;
 }
 
@@ -170,6 +170,7 @@
 }
 
 .IsOpen {
+  overflow: hidden;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -202,6 +203,7 @@
   padding: 0;
   right: 20px;
   top: 20px;
+  stroke: #fafafa;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,6 +227,7 @@
   .CoopInputGroup {
     display: inline-flex;
     flex-direction: row;
+    gap: 32px;
   }
 
   .CoopInputItem {
@@ -244,6 +247,7 @@
 
   .ContactsList {
     margin-top: 18px;
+    gap: 8px;
   }
 
   .ContactLink {
@@ -264,6 +268,7 @@
 @media screen and (min-width: 1280px) {
   .WorkTogetherSection {
     background-position-x: 1040px;
+    padding-left: 196px;
   }
 
   .CoopInputItem {
@@ -276,10 +281,5 @@
 
   .CoopSubmitBtn {
     margin-left: 86px;
-  }
-
-  .WorkTogetherSection {
-    width: 1082px;
-    margin: auto;
   }
 }

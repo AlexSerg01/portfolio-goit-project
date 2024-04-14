@@ -4,14 +4,31 @@ import Swiper from 'swiper';
 // import styles bundle
 import 'swiper/css';
 
+
+const reviewsList = document.getElementById('reviewsList');
 const screenWidth = window.innerWidth;
+let slidesPerView;
+
+if (screenWidth >= 1280) {
+  slidesPerView = 4;
+} else if (screenWidth >= 768 && screenWidth < 1280) {
+  slidesPerView = 2;
+} else if (screenWidth < 768) {
+  slidesPerView = 1;
+}
+
+function createSwiper() {
+console.log(screenWidth)
 const swiper = new Swiper('.reviews-swiper', {
   // Optional parameters
   cssMode: true, 
-  spaceBetween: (screenWidth >=768 && screenWidth < 1280) ? 14: 16,
+  slidesPerView: slidesPerView,
+  slidesPerGroup: 1,
+  
 
   // Navigation arrows
   navigation: {
+    disabledClass: "BtnOff",
     nextEl: '.button-next',
     prevEl: '.button-prev',
   },
@@ -19,29 +36,13 @@ const swiper = new Swiper('.reviews-swiper', {
   keyboard: true,
   touch: true,
   
-  // Віртуальні слайди
-  virtual: {
-    slides: (function () {
-
-      let slide = []
-      if (screenWidth < 768) {
-        return ['', '', '', '', '', '']
-      } else if ((screenWidth >= 768) && (screenWidth < 1440)) {
-        return ['', '', '']        
-      } else if (screenWidth >= 1440) {
-        return ['', '']
-      }
-    }()),
-    addSlidesBefore: screenWidth >= 768 ? 1 : 5, 
-    addSlidesAfter: screenWidth >= 768 ? 1 : 5,
-  }
 });
 
 
-
+}
 
 // запит з бекенду=========================================================
-const reviewsList = document.getElementById('reviewsList');
+// const reviewsList = document.getElementById('reviewsList');
 
 fetch("https://portfolio-js.b.goit.study/api/reviews")
   .then((response) => {
@@ -53,15 +54,16 @@ fetch("https://portfolio-js.b.goit.study/api/reviews")
   .then((reviews) => {
     const markup = reviews.map((review) => {
       return `
-        <li class="review">
+        <div class="review swiper-slide">
         <img class="user-icon" src="${review.avatar_url}" alt="Avatar">
           <h4 class="name">${review.author}</h4>
           <p class="review-text">${review.review}</p>
-        </li>
+        </div>
       `;
     }).join("");
 
     reviewsList.innerHTML = markup; // Вставляємо HTML у список відгуків
+    createSwiper()
   })
   .catch((error) => console.log(error));
 

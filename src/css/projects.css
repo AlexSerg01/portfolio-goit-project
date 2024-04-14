@@ -133,7 +133,7 @@
 }
 
 /* Планшети (з 768px) */
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   /* Стилі для планшетів тут */
 
   .Section {
@@ -263,8 +263,8 @@
   }
 }
 
-/* Десктоп (з 1280px) */
-@media screen and (min-width: 1280px) {
+/* Десктоп (з 1440px) */
+@media screen and (min-width: 1440px) {
   /* Стилі для десктопу тут */
 
   .Section {

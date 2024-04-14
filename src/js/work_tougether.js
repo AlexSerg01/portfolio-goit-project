@@ -4,20 +4,40 @@ const wtGlobalRefs = {
   wtCoopForm: document.querySelector('#WtForm'),
   wtModal: document.querySelector('.WorkTogetherModalWrapper'),
   wtResultMsg: document.querySelector('.CoopResultMsg'),
+  wtModalRespTitle: document.querySelector('#WtModalRespTitle'),
+  wtModalRespMessage: document.querySelector('#WtModalRespMessage'),
+  wtModalClose: document.querySelector('.WorkTogetherModalClose'),
+  wtModalBox: document.querySelector('.WorkTogetherModal'),
 };
 
 wtGlobalRefs.wtCoopForm.addEventListener('submit', sendWtUserData);
+wtGlobalRefs.wtCoopForm.elements.email.addEventListener(
+  'input',
+  resetValidation
+);
 wtGlobalRefs.wtCoopForm.elements.email.addEventListener('blur', emailValidator);
+wtGlobalRefs.wtCoopForm.elements.email.addEventListener('blur', inputCutString);
+wtGlobalRefs.wtCoopForm.elements.email.addEventListener(
+  'focus',
+  inputFullString
+);
+wtGlobalRefs.wtCoopForm.elements.comment.addEventListener(
+  'focus',
+  inputFullString
+);
+wtGlobalRefs.wtCoopForm.elements.comment.addEventListener(
+  'blur',
+  inputCutString
+);
 wtGlobalRefs.wtModal.addEventListener('click', closeWtModal);
+window.addEventListener('keydown', closeWtModal);
 
 async function sendWtUserData(e) {
   e.preventDefault();
   wtGlobalRefs.wtResultMsg.textContent = '';
   try {
-    const data = await PostRequest(
-      wtGlobalRefs.wtCoopForm.elements.email.value,
-      wtGlobalRefs.wtCoopForm.elements.comment.value
-    );
+    const { email, comment } = wtGlobalRefs.wtCoopForm.elements;
+    const data = await PostRequest(email.value, comment.value);
     openWtModal(data);
     showSuccess();
     wtGlobalRefs.wtCoopForm.reset();
@@ -25,23 +45,16 @@ async function sendWtUserData(e) {
 }
 
 function openWtModal({ title, message }) {
-  const refs = {
-    wtModalRespTitle: document.querySelector('#WtModalRespTitle'),
-    wtModalRespMessage: document.querySelector('#WtModalRespMessage'),
-  };
-  refs.wtModalRespTitle.textContent = title;
-  refs.wtModalRespMessage.textContent = message;
+  wtGlobalRefs.wtModalRespTitle.textContent = title;
+  wtGlobalRefs.wtModalRespMessage.textContent = message;
   wtGlobalRefs.wtModal.classList.add('IsOpen');
 }
 
 function closeWtModal(e) {
-  const refs = {
-    wtModalClose: document.querySelector('.WorkTogetherModalClose'),
-    wtModalBox: document.querySelector('.WorkTogetherModal'),
-  };
   if (
-    !refs.wtModalBox.contains(e.target) ||
-    refs.wtModalClose.contains(e.target)
+    !wtGlobalRefs.wtModalBox.contains(e.target) ||
+    wtGlobalRefs.wtModalClose.contains(e.target) ||
+    e.code === 'Escape'
   ) {
     wtGlobalRefs.wtModal.classList.remove('IsOpen');
     wtGlobalRefs.wtResultMsg.textContent = '';
@@ -63,22 +76,38 @@ function emailValidator(e) {
 }
 
 function showValidationSuccess() {
-  wtGlobalRefs.wtCoopForm.elements.email.classList.remove('Invalid');
-  wtGlobalRefs.wtCoopForm.elements.email.classList.add('Success');
+  const { email } = wtGlobalRefs.wtCoopForm.elements;
+  email.classList.remove('Invalid');
+  email.classList.add('Success');
   wtGlobalRefs.wtResultMsg.textContent = 'Success!';
   wtGlobalRefs.wtResultMsg.classList.add('Success');
 }
 
 function showValidationInvalid() {
-  wtGlobalRefs.wtCoopForm.elements.email.classList.remove('Success');
-  wtGlobalRefs.wtCoopForm.elements.email.classList.add('Invalid');
+  const { email } = wtGlobalRefs.wtCoopForm.elements;
+  email.classList.remove('Success');
+  email.classList.add('Invalid');
   wtGlobalRefs.wtResultMsg.textContent = 'Invalid email, try again';
   wtGlobalRefs.wtResultMsg.classList.remove('Success');
 }
 
-function resetValidation() {
-  wtGlobalRefs.wtCoopForm.elements.email.classList.remove('Invalid');
-  wtGlobalRefs.wtCoopForm.elements.email.classList.remove('Success');
-  wtGlobalRefs.wtResultMsg.textContent = '';
-  wtGlobalRefs.wtResultMsg.classList.remove('Success');
+function resetValidation(e) {
+  if (e.target.name === 'email') {
+    wtGlobalRefs.wtResultMsg.textContent = '';
+    wtGlobalRefs.wtResultMsg.classList.remove('Success');
+  }
+  const { email } = wtGlobalRefs.wtCoopForm.elements;
+  email.classList.remove('Invalid');
+  email.classList.remove('Success');
+}
+
+function inputCutString(e) {
+  e.target.setAttribute('data-value', e.target.value.trim());
+  if (e.target.value.length > 15) {
+    e.target.value = e.target.value.slice(0, 16).concat('...');
+  }
+}
+
+function inputFullString(e) {
+  if (e.target.value) e.target.value = e.target.getAttribute('data-value');
 }

@@ -18,7 +18,8 @@
   width: 44px;
   height: 44px;
   display: inline-block;
-  transform: translateY(10px);
+  margin-bottom: -8px;
+  margin-right: 8px;
 }
 
 .WorkTogetherTitle {
@@ -73,10 +74,12 @@
 
 .CoopInput.Success {
   border-bottom-color: #3cbc81;
+  transition: border-bottom-color 250ms ease;
 }
 
 .CoopInput.Invalid {
   border-bottom-color: #e74a3b;
+  transition: border-bottom-color 250ms ease;
 }
 
 .CoopResultMsg {
@@ -85,6 +88,7 @@
   line-height: 1.28;
   letter-spacing: -0.02em;
   color: #e74a3b;
+  transition: color 250ms ease;
 }
 
 .CoopResultMsg.Success {
@@ -207,13 +211,11 @@
     background-position-x: 570px;
   }
 
-  .prueba {
-    gap: 20px;
-  }
-
   .WorkTogetherPhoto {
     width: 70px;
     height: 70px;
+    margin-bottom: -12px;
+    margin-right: 20px;
   }
 
   .WorkTogetherTitle {

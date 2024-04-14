@@ -8,7 +8,7 @@
     }
 }
 
-.benefits-tiyle {
+.benefitsTiyle {
     font-family: Inter Tight;
     font-size: 16px;
     font-weight: 600;
@@ -20,21 +20,21 @@
     padding-bottom: 32px;
 }
 
-   .benefits-blok-list {}
+   .benefitsBlokList {}
 
-    .benefits-ul {
+    .benefitsUl {
         display: flex;
         flex-direction: column;
         gap: 16px;
         padding-bottom: 32px;
     }
 
-    .benefits-items {
+    .benefitsItems {
         background-color: #242527;
         border-radius: 20px;
     }
 
-    .benefits-icon {
+    .benefitsIcon {
         width: 48px;
         height: 48px;
         background-color: #ED3B44;
@@ -43,9 +43,10 @@
         margin-left: 24px;
         margin-bottom: 64px;
         padding: 12px;
+        fill: #FAFAFA;
     }
 
-    .benefits-items-title {
+    .benefitsItemsTitle {
         font-family: Inter Tight;
         font-size: 20px;
         font-weight: 600;
@@ -57,7 +58,7 @@
         margin-bottom: 8px;
     }
 
-    .benefits-text {
+    .benefitsText {
         font-family: Inter Tight;
         font-size: 16px;
         font-weight: 500;
@@ -70,7 +71,7 @@
         padding-bottom: 20px;
     }
 
-    .order-link {
+    .orderLink {
         display: block;
         width: 189px;
         padding: 18px 36px;
@@ -83,22 +84,29 @@
         line-height: 1.21;
         letter-spacing: -0.02em;
         color: #FAFAFA;
+        transition: border-color 250ms ease;
+    }
+
+    .orderLink:hover,
+   .orderLink:focus {
+        border-color: #fafafa;
     }
 
 /* Планшети (з 768px) */
 @media screen and (min-width: 768px) {
     .benefits {
         max-width: 768px;
+        margin: 0 auto;
         padding: 0 32px 32px 32px;
     }
 
-    .benefits-ul {
+    .benefitsUl {
         display: flex;
         flex-direction:row;
         flex-wrap: wrap;
     }
 
-    .benefits-items {
+    .benefitsItems {
         max-width: 344px;
     
     }
@@ -108,24 +116,26 @@
 @media screen and (min-width: 1280px) {
     .benefits {
         max-width: 1280px;
-        display: inline-flex;
+        margin: 0 auto;
+        display: block;
+        position: relative;       
 }
 
-    .benefits-tiyle {
-        padding-right: 300px;
+    .benefitsTiyle {
+        position: absolute;
     }
 
-    .benefits-blok-list{
-        max-width: 680px;
+    .benefitsBlokList{
+        padding-left: 534px;
     }
 
-        .benefits-ul {
+        .benefitsUl {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
         }
     
-        .benefits-items {
+        .benefitsItems {
             max-width: 332px;
     
         }

@@ -4,10 +4,11 @@ import Swiper from 'swiper';
 // import styles bundle
 import 'swiper/css';
 
+const screenWidth = window.innerWidth;
 const swiper = new Swiper('.reviews-swiper', {
   // Optional parameters
-  cssMode: true,
-  spaceBetween: 30,
+  cssMode: true, 
+  spaceBetween: (screenWidth >=768 && screenWidth < 1280) ? 14: 16,
 
   // Navigation arrows
   navigation: {
@@ -21,14 +22,22 @@ const swiper = new Swiper('.reviews-swiper', {
   // Віртуальні слайди
   virtual: {
     slides: (function () {
+
       let slide = []
-      for (let i = 0; i < 10; i++) {
-        slide.push(`<div class="swiper-slide">${i}</div>`);
+      if (screenWidth < 768) {
+        return ['', '', '', '', '', '']
+      } else if ((screenWidth >= 768) && (screenWidth < 1440)) {
+        return ['', '', '']        
+      } else if (screenWidth >= 1440) {
+        return ['', '']
       }
-      return slide;
     }()),
+    addSlidesBefore: screenWidth >= 768 ? 1 : 5, 
+    addSlidesAfter: screenWidth >= 768 ? 1 : 5,
   }
 });
+
+
 
 
 // запит з бекенду=========================================================
@@ -55,7 +64,6 @@ fetch("https://portfolio-js.b.goit.study/api/reviews")
     reviewsList.innerHTML = markup; // Вставляємо HTML у список відгуків
   })
   .catch((error) => console.log(error));
-
 
 
   

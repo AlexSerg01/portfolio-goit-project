@@ -29,7 +29,7 @@
                 d="M16 16c3.314 0 6-2.686 6-6s-2.686-6-6-6c-3.314 0-6 2.686-6 6s2.686 6 6 6z"></path>
         </symbol>
         <symbol id="icon-arrow-down" viewBox="0 0 32 32">
-            <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2"
+            <path fill="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2"
                 d="M24 12l-8 8-8-8"></path>
         </symbol>
         <symbol id="icon-arrow-narrow-right" viewBox="0 0 32 32">

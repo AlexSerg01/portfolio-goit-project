@@ -1,52 +1,12 @@
-/*
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
-
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-}
-
-/* Планшети (з 768px) */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-}
-
-/* Десктоп (з 1280px) */
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-}
-
 /* Стилі для мобільних пристроїв тут */
 
 @media screen and (max-width: 767px) {
-  .section {
+  .Section {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
-  .title-project {
+  .TitleProject {
     color: rgba(250, 250, 250, 0.4);
     font-size: 16px;
     font-weight: 600;
@@ -63,37 +23,33 @@
   }
 
   .swiper-slide {
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     margin-bottom: 32px;
     border-radius: 24px;
   }
 
-  .discript-project {
+  .DiscriptProject {
     background-color: #fbfbfb;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     padding: 32px;
   }
 
-  .technologies-list-project {
+  .TechnologiesListProject {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 96px;
   }
 
-  .technologies-text {
+  .TechnologiesText {
     display: flex;
     padding: 13px 18px 13px 18px;
     border: 1px solid rgba(28, 29, 32, 0.2);
     border-radius: 60px;
   }
 
-  .project-name {
+  .ProjectName {
     color: rgb(28, 29, 32);
-    font-family: Inter Tight;
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
@@ -102,26 +58,29 @@
     margin-bottom: 32px;
   }
 
-  .link-github-project {
+  .LinkGithubProject {
     padding: 13px 32px 13px 32px;
     border-radius: 60px;
     background: rgb(237, 59, 68);
     color: #fafafa;
-    font-family: Inter Tight;
-    font-size: 16px;
-    font-weight: 500;
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
+    cursor: pointer;
   }
 
-  .project-picture-container {
+  .LinkGithubProject:hover,
+  .LinkGithubProject:focus {
+    background-color: #e0373f;
+  }
+
+  .ProjectPictureContainer {
     border-radius: 0px 0px 24px 24px;
     background: rgb(36, 37, 39);
     padding: 100px 16px 100px 16px;
   }
 
-  .arrow-box {
+  .ArrowBox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -129,32 +88,47 @@
     gap: 12px;
   }
 
-  .icon-arrow-next {
-    stroke: inherit;
-  }
-
-  .s-button-prev {
+  .SwButtonPrev {
+    width: 52px;
+    height: 52px;
     display: flex;
+    align-items: center;
     padding: 14px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
     transform: rotate(180deg);
+    cursor: pointer;
   }
 
-  .s-button-next {
+  .IconArrowPrev {
+    height: 24px;
+    width: 24px;
+  }
+
+  .SwButtonNext {
+    width: 52px;
+    height: 52px;
     display: flex;
+    align-items: center;
     padding: 14px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
+    cursor: pointer;
+  }
+
+  .IconArrowNext {
+    height: 24px;
+    width: 24px;
   }
 
   .swiper-button-disabled {
     border: 1px solid rgba(250, 250, 250, 0.2);
     stroke: rgba(250, 250, 250, 0.2);
+    cursor: default;
   }
 }
 
@@ -162,14 +136,13 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   /* Стилі для планшетів тут */
 
-  .section {
+  .Section {
     padding-top: 48px;
     padding-bottom: 48px;
   }
 
-  .title-project {
+  .TitleProject {
     color: rgba(250, 250, 250, 0.4);
-    font-family: Inter Tight;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -185,67 +158,62 @@
   }
 
   .swiper-slide {
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     margin-bottom: 64px;
     border-radius: 24px;
   }
 
-  .discript-project {
+  .DiscriptProject {
     background-color: #fbfbfb;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     padding: 64px;
   }
 
-  .technologies-list-project {
+  .TechnologiesListProject {
     display: flex;
     gap: 6px;
     margin-bottom: 164px;
   }
 
-  .technologies-text {
+  .TechnologiesText {
     display: flex;
-    padding: 18px 18px 18px 18px;
+    padding: 18px;
     border: 1px solid rgba(28, 29, 32, 0.2);
     border-radius: 60px;
-
-    /* Desktop_tablet/Btn_text */
     color: rgb(28, 29, 32);
-    font-family: Inter Tight;
-    font-weight: 500;
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
   }
 
-  .project-name {
+  .ProjectName {
     width: 494px;
     color: rgb(28, 29, 32);
-    font-family: Inter Tight;
     font-size: 44px;
     font-weight: 500;
     line-height: 44px;
     letter-spacing: -0.03em;
     text-align: left;
-    margin-bottom: 32px;
+    margin-bottom: 44px;
   }
 
-  .link-github-project {
+  .LinkGithubProject {
     padding: 18px 50px 18px 50px;
     border-radius: 60px;
     background: rgb(237, 59, 68);
     color: rgb(250, 250, 250);
-    font-family: Inter Tight;
-    font-size: 16px;
-    font-weight: 500;
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
+    cursor: pointer;
   }
 
-  .project-picture-container {
+  .LinkGithubProject:hover,
+  .LinkGithubProject:focus {
+    background-color: #e0373f;
+  }
+
+  .ProjectPictureContainer {
     display: flex;
     justify-content: center;
     border-radius: 0px 0px 24px 24px;
@@ -253,39 +221,45 @@
     padding: 120px 45px 120px 45px;
   }
 
-  .arrow-box {
+  .ArrowBox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 12px;
   }
-  .icon-arrow-next {
-    stroke: inherit;
-  }
 
-  .s-button-prev {
+  .SwButtonPrev {
     display: flex;
+    align-items: center;
+    height: 68px;
+    width: 68px;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
     transform: rotate(180deg);
+    cursor: pointer;
   }
 
-  .s-button-next {
+  .SwButtonNext {
     display: flex;
+    align-items: center;
+    height: 68px;
+    width: 68px;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
+    cursor: pointer;
   }
 
   .swiper-button-disabled {
     border: 1px solid rgba(250, 250, 250, 0.2);
     stroke: rgba(250, 250, 250, 0.2);
+    cursor: default;
   }
 }
 
@@ -293,14 +267,13 @@
 @media screen and (min-width: 1280px) {
   /* Стилі для десктопу тут */
 
-  .section {
+  .Section {
     padding-top: 82px;
     padding-bottom: 82px;
   }
 
-  .title-project {
+  .TitleProject {
     color: rgba(250, 250, 250, 0.4);
-    font-family: Inter Tight;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -319,66 +292,61 @@
     display: flex !important;
     flex-direction: row;
     justify-content: center;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     margin-bottom: 64px;
     border-radius: 24px;
   }
 
-  .discript-project {
+  .DiscriptProject {
     background-color: #fbfbfb;
     border-radius: 24px 0px 0px 24px;
     padding: 64px;
   }
 
-  .technologies-list-project {
+  .TechnologiesListProject {
     display: flex;
     gap: 6px;
     margin-bottom: 164px;
   }
 
-  .technologies-text {
+  .TechnologiesText {
     display: flex;
-    padding: 18px 18px 18px 18px;
+    padding: 18px;
     border: 1px solid rgba(28, 29, 32, 0.2);
     border-radius: 60px;
-
-    /* Desktop_tablet/Btn_text */
     color: rgb(28, 29, 32);
-    font-family: Inter Tight;
-    font-weight: 500;
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
   }
 
-  .project-name {
+  .ProjectName {
     width: 494px;
     color: rgb(28, 29, 32);
-    font-family: Inter Tight;
     font-size: 44px;
     font-weight: 500;
     line-height: 44px;
     letter-spacing: -0.03em;
     text-align: left;
-    margin-bottom: 32px;
+    margin-bottom: 44px;
   }
 
-  .link-github-project {
+  .LinkGithubProject {
     padding: 18px 50px 18px 50px;
     border-radius: 60px;
     background: rgb(237, 59, 68);
-    color: rgb(250, 250, 250);
-    font-family: Inter Tight;
-    font-size: 16px;
-    font-weight: 500;
+    color: #fafafa;
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
+    cursor: pointer;
   }
 
-  .project-picture-container {
+  .LinkGithubProject:hover,
+  .LinkGithubProject:focus {
+    background-color: #e0373f;
+  }
+
+  .ProjectPictureContainer {
     display: flex;
     justify-content: center;
     border-radius: 0px 24px 24px 0px;
@@ -386,7 +354,7 @@
     padding: 120px 45px 120px 45px;
   }
 
-  .arrow-box {
+  .ArrowBox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -394,31 +362,36 @@
     gap: 12px;
   }
 
-  .icon-arrow-next {
-    stroke: inherit;
-  }
-
-  .s-button-prev {
+  .SwButtonPrev {
     display: flex;
+    align-items: center;
+    height: 68px;
+    width: 68px;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
     transform: rotate(180deg);
+    cursor: pointer;
   }
 
-  .s-button-next {
+  .SwButtonNext {
     display: flex;
+    align-items: center;
+    height: 68px;
+    width: 68px;
     padding: 18px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     fill: transparent;
     stroke: #fafafa;
+    cursor: pointer;
   }
 
   .swiper-button-disabled {
     border: 1px solid rgba(250, 250, 250, 0.2);
     stroke: rgba(250, 250, 250, 0.2);
+    cursor: default;
   }
 }

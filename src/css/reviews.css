@@ -30,21 +30,25 @@
 
 /* reviews  */
 
+
 #reviewsList {
   display: flex;
   flex-wrap: nowrap; /* Забороняємо переносити елементи на новий рядок */
   gap: 16px;
+  justify-content: flex-start;
+  max-width: 100%;
+  
 }
 /* Картка відгуків */
 .review {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-
-  width: 343px;
+  flex-basis: calc((100% - 0px) / 1);
   height: 302px;
   flex-shrink: 0; /* Відключаємо зміщення відгуків, щоб вони не змінювали ширину */
 }
+
 
 .user-icon {
   border-radius: 10px;
@@ -107,6 +111,22 @@
     margin: 0 auto;
     padding: 0 15px;
   }
+
+    #reviewsList {
+     gap: 16px;
+  
+    }
+    .review {
+      border: 1px solid rgba(250, 250, 250, 0.2);
+      border-radius: 20px;
+      padding: 32px 24px;
+      /* flex-basis: calc((100% - 16px) / 2); */
+      flex-basis: 360px;
+      height: 302px;
+      flex-shrink: 0;
+      /* Відключаємо зміщення відгуків, щоб вони не змінювали ширину */
+    }
+
 }
 
 /* Десктоп (з 1280px) */
@@ -128,12 +148,18 @@
     padding: 0 15px;
   }
 
+    #reviewsList {
+      gap: 16px;
+  
+    }
+
   .review {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-    width: 332px;
+    flex-basis: calc((100% - 48px) / 4);
     height: 302px;
     flex-shrink: 0; /* Відключаємо зміщення відгуків, щоб вони не змінювали ширину */
   }
+    
 }

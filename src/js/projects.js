@@ -11,8 +11,8 @@ new Swiper('.swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.s-button-next',
-    prevEl: '.s-button-prev',
+    nextEl: '.SwButtonNext',
+    prevEl: '.SwButtonPrev',
   },
   mousewheel: true,
   keyboard: true,

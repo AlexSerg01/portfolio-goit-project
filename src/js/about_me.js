@@ -11,8 +11,8 @@ const aboutMeNextButton = document.querySelector('.swiper-btn-next');
 
 const swiper = new Swiper(aboutMeSwiperBox, {
   modules: [Navigation, Pagination, Keyboard],
+  loop: true,
 
-  modules: [Navigation, Keyboard],
   navigation: {
     nextEl: aboutMeNextButton,
   },

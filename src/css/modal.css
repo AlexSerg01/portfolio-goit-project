@@ -1,15 +1,21 @@
 .ModalMenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    /* right: 0; */
+    width: 100%;
     height: 100%;
+    background-image: url(../img/modal/modal-bg.png);
     z-index: 999;
+    opacity: 0;
+    transition: top 350ms ease-in-out, right 350ms ease-in-out, opacity 350ms ease-in-out;
 }
 
-.ModalOpen {
-    display: block;
+.Open {
+top: 0;
+    right: 0;
+    opacity: 1;
+    
 }
 
 .ModalBodyLock {
@@ -22,7 +28,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: linear-gradient(to right, #ED3B44, #000000);
+    /* background: linear-gradient(to right, #ED3B44, #000000); */
 }
 .MenuItem {
     color: white;
@@ -55,3 +61,11 @@
     outline: transparent;
     border: 1px solid transparent;
 }
+
+  @media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+      .ModalMenu {
+        background-image: url(../img/modal/modal-bg@2x.png);
+      }
+  }

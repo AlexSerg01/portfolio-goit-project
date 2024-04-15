@@ -37,7 +37,7 @@ const swiper = new Swiper(aboutMeSwiperBox, {
       spaceBetween: 16,
     },
     1440: {
-      slidesPerView: 4,
+      slidesPerView: 'auto',
       spaceBetween: 16,
     },
   },

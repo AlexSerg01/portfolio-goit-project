@@ -2,6 +2,7 @@
 import Swiper from 'swiper';
 import { doFetch } from './api';
 
+
 // import styles bundle
 import 'swiper/css';
 

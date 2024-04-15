@@ -17,7 +17,7 @@
 @import url('./covers.css');
 @import url('./modal.css');
 
-root {
+:root {
   font-family: Inter Tight;
   font-size: 16px;
   font-weight: 500;

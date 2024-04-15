@@ -19,3 +19,163 @@
 .nav-link:focus {
   color: #747bff;
 }
+
+/* WHOSE CODE UP ABOVE??? */
+
+.page-header {
+  position: absolute;
+  top: 32px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  padding: 0 15px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 343px;
+  min-height: 80px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.header-logo-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+@media screen and (max-width: 767px) {
+  .header-burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 28px;
+    width: 28px;
+  }
+
+  .header-burger-vector {
+    stroke: #fafafa;
+  }
+}
+
+.header-navigation {
+  display: none;
+}
+
+.header-order-link {
+  display: none;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .header-burger-button {
+    display: none;
+  }
+
+  .page-header {
+    padding: 0 32px;
+  }
+
+  .header-wrapper {
+    width: 704px;
+  }
+
+  .header-navigation {
+    position: relative;
+    display: flex;
+  }
+
+  .header-menu-button {
+    display: flex;
+    width: 67px;
+    height: 39px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #fafafa;
+    transition: color 250ms ease;
+  }
+
+  .header-menu-list {
+    display: none;
+  }
+
+  .menu-is-visible {
+    display: flex;
+    position: absolute;
+    top: 47px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .header-menu-link {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    transition: color 250ms ease;
+  }
+
+  .header-order-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 163px;
+    height: 55px;
+    background-color: #ed3b44;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    transition: background-color 250ms ease;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header-wrapper {
+    width: 1376px;
+  }
+
+  .header-menu-button:hover,
+  .header-menu-link:hover,
+  .header-menu-link:focus {
+    color: #ed3b44;
+  }
+
+  .header-order-link:hover {
+    background-color: #e0373f;
+  }
+}

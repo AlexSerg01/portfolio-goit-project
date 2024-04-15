@@ -1,12 +1,13 @@
-
 import Swiper from 'swiper';
 import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const aboutMeSwiperBox = document.querySelector(".swipper-and-button-wraper > .swiper");
-const aboutMeNextButton = document.querySelector('.swiper-next-button');
+const aboutMeSwiperBox = document.querySelector(
+  '.swipper-and-button-wraper > .swiper'
+);
+const aboutMeNextButton = document.querySelector('.swiper-btn-next');
 
 const swiper = new Swiper(aboutMeSwiperBox, {
   modules: [Navigation, Pagination, Keyboard],
@@ -15,7 +16,6 @@ const swiper = new Swiper(aboutMeSwiperBox, {
   navigation: {
     nextEl: aboutMeNextButton,
   },
-  direction: 'horizontal',
   centeredSlides: true,
   watchOverflow: true,
   keyboard: {
@@ -23,7 +23,7 @@ const swiper = new Swiper(aboutMeSwiperBox, {
     onlyInViewport: true,
     pageUpDown: true,
   },
-    breakpoints: {
+  breakpoints: {
     320: {
       slidesPerView: 'auto',
       spaceBetween: 18,
@@ -41,21 +41,15 @@ const swiper = new Swiper(aboutMeSwiperBox, {
       spaceBetween: 16,
     },
   },
-  slidesPerView: 1,
+  slidesPerView: 2,
 });
-
-
-
-
 import Accordion from 'accordion-js';
 
-const accordionButtonTrigger = document.querySelector(".ac-trigger")
+const accordionButtonTrigger = document.querySelector('.ac-trigger');
 
-
-new Accordion(".accordion-container", {
+new Accordion('.accordion-container', {
   duration: 600,
   collapse: true,
   openOnInit: [0],
   showMultiple: true,
-})
-
+});

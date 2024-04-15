@@ -1,161 +1,185 @@
 <section class="about-me-section" id="#about-me">
+  <div class="Container">
     <div class="about-me-container-section">
-        <h2 class="section-caption visually-hidden">Abouts me</h2>
-        <div class="about-me-description-and-photo-wrapper">
-            <div class="about-me-description">
-                <div class="about-me-description-wrapper">
-                    <p class="about-me-description-text">
-                        I work with people all over the world to create impressive and
-                        <span class="accent-red">functional</span>
-                        <span class="accent-color">websites</span> that reflect each
-                        client's unique personality.
-                    </p>
-                </div>
+      <h2 class="section-caption visually-hidden">Abouts me</h2>
+      <div class="about-me-description-and-photo-wrapper">
+        <div class="about-me-description">
+          <div class="about-me-description-wrapper">
+            <p class="about-me-description-text">
+              I work with people all over the world to create impressive and
+              <span class="accent-red">functional</span>
+              <span class="accent-color">websites</span> that reflect each
+              client's unique personality.
+            </p>
+          </div>
+        </div>
+        <div class="tumb-picture">
+          <picture class="about-me-picture">
+            <source
+              srcset="
+                ./img/dev-lloyd/portrait-desktop.jpg    1x,
+                ./img/dev-lloyd/portrait-desktop@2x.jpg 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+                ./img/dev-lloyd/portrait-tablet.jpg    1x,
+                ./img/dev-lloyd/portrait-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./img/dev-lloyd/portrait-mobile.jpg    1x,
+                ./img/dev-lloyd/portrait-mobile@2x.jpg 2x
+              "
+              media="(min-width: 375px)"
+            />
+            <img
+              src="./img/dev-lloyd/portrait-desktop.jpg"
+              alt="Photo developer"
+              width="680"
+              height="700"
+            />
+          </picture>
+        </div>
+      </div>
+      <ul class="list-about accordion-container">
+        <li class="ac title">
+          <div class="about-me-item-caption-and-button-wrapper">
+            <h3 class="title-about ac-header">About me</h3>
+            <button class="ac-trigger about-button">
+              <svg class="icon-about-me">
+                <use href="../img/icons.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="ac-panel panel-about">
+            <div class="about-me-accordion-text-wrapper">
+              <p class="ac-text text-about">
+                I am Lloyd Jefferson, a talented programmer with extensive
+                expertise in software development. I have an understanding of
+                different programming languages and technologies, always ready
+                to improve my skills. I always follow the latest trends and look
+                for unconventional, creative solutions to problems. I have a
+                high level of analytical skills and am able to effectively solve
+                even the most difficult tasks encountered on the way.
+              </p>
+              <p class="ac-text text-about">
+                Able to work both independently and in a team. I can effectively
+                cooperate with colleagues, exchanging ideas and finding optimal
+                solutions. Professional maturity allows you to calmly cope with
+                challenges and stressful situations, while maintaining a high
+                quality of work.I am always looking for opportunities for
+                self-improvement. I actively study new technologies and
+                practices to stay abreast of the latest innovations. I have a
+                strong understanding of various programming languages,
+                frameworks and architectural concepts that allow me to create
+                efficient and scalable software.
+              </p>
             </div>
-            <div class="tumb-picture">
-                <picture class="about-me-picture">
-
-                    <source srcset="./img/dev-lloyd/dev-lloyd-dsk.png  1x,./img/dev-lloyd/dev-lloyd-dsk@2x.png  2x" media="(min-width: 1440px)" />
-                <source srcset="./img/dev-lloyd/dev-lloyd-tb.png 1x,./img/dev-lloyd/dev-lloyd-tb@2x.png 2x" media="(min-width: 768px)" />
-                <source srcset="./img/dev-lloyd/dev-lloyd-m.png  1x,./img/dev-lloyd/dev-lloyd-m@2x.png  2x" media="(min-width: 375px)" />
-                <img src="./img/dev-lloyd/dev-lloyd-m.png" alt="Photo" />
-
-            </picture>
-            </div>
-            </div>
-            <ul class="list-about accordion-container">
-                <li class="ac title">
-                    <div class="about-me-item-caption-and-button-wrapper">
-                        <h3 class="title-about ac-header">About me</h3>
-                        <button class="ac-trigger about-button">
-                            <svg class="icon-about-me">
-                                <use href="../img/icons.svg#icon-arrow-down"></use>
-                            </svg>
-                        </button>
-                        </div>
-                        <div class="ac-panel panel-about">
-                            <div class="about-me-accordion-text-wrapper">
-                                <p class="ac-text text-about">
-                                    I am Lloyd Jefferson, a talented programmer with extensive
-                                    expertise in software development. I have an understanding of
-                                    different programming languages and technologies, always ready to
-                                    improve my skills. I always follow the latest trends and look for
-                                    unconventional, creative solutions to problems. I have a high
-                                    level of analytical skills and am able to effectively solve even
-                                    the most difficult tasks encountered on the way.
-                                </p>
-                                <p class="ac-text text-about">
-                                    Able to work both independently and in a team. I can effectively
-                                    cooperate with colleagues, exchanging ideas and finding optimal
-                                    solutions. Professional maturity allows you to calmly cope with
-                                    challenges and stressful situations, while maintaining a high
-                                    quality of work.I am always looking for opportunities for
-                                    self-improvement. I actively study new technologies and practices
-                                    to stay abreast of the latest innovations. I have a strong
-                                    understanding of various programming languages, frameworks and
-                                    architectural concepts that allow me to create efficient and
-                                    scalable software.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="line-between-accordion-item"></div>
-                        </li>
-                        <li class="ac titile">
-                            <div class="about-me-item-caption-and-button-wrapper">
-                                <h3 class="title-about ac-header">Role</h3>
-                                <button class="ac-trigger about-button">
-                                    <svg class="icon-about-me">
-                                        <use href="../img/icons.svg#icon-arrow-down"></use>
-                                    </svg>
-                                </button>
-                                </button>
-                            </div>
-                            <div class="ac-panel">
-                                <ul class="about-me-accordion-pannel-list">
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">Frontend development</p>
-                                    </li>
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">HeadlessCMS,Wordpress</p>
-                                    </li>
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">Blender(enjoy)</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="line-between-accordion-item"></div>
-                        </li>
-                        <li class="ac">
-                            <div class="about-me-item-caption-and-button-wrapper">
-                                <h3 class="title-about ac-header">Education</h3>
-                                <button class="ac-trigger about-button">
-                                    <svg class="icon-about-me">
-                                        <use href="../img/icons.svg#icon-arrow-down"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="ac-panel">
-                                <ul class="about-me-accordion-pannel-list">
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">
-                                            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
-                                            York
-                                        </p>
-                                    </li>
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">
-                                            2019 - 2020 / Advanced Web Development Certificate, GoIT IT
-                                            School, New York
-                                        </p>
-                                    </li>
-                                    <li class="about-me-accordion-pannel-item">
-                                        <p class="ac-text text-about">
-                                            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="line-between-accordion-item"></div>
-                        </li>
-                        </ul>
-                        <div class="swipper-and-button-wraper">
-                            <ul class="swiper">
-                                <li class="swiper-wrapper">
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">HTML/CSS</p>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">JavaScript</p>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">React</p>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">Node.js</p>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">React Native</p>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="swiper-slide-item">
-                                        <p class="swiper-slide-item-text">Soft skills</p>
-                                    </div>
-                                </li>
-                                </li>
-                            </ul>
-                            <button type="button" class="swiper-next-button"><svg>
-                                    <use class="icon-next-button" href="../img/icons.svg#icon-arrow-narrow-right"></use>
-                                </svg></button>
-                        </div>
-                        </div>
-                        </section>
+          </div>
+          <div class="line-between-accordion-item"></div>
+        </li>
+        <li class="ac title">
+          <div class="about-me-item-caption-and-button-wrapper">
+            <h3 class="title-about ac-header">Role</h3>
+            <button class="ac-trigger about-button">
+              <svg class="icon-about-me">
+                <use href="../img/icons.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="ac-panel panel-about">
+            <ul class="about-me-accordion-pannel-list">
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">Frontend development</p>
+              </li>
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">HeadlessCMS,Wordpress</p>
+              </li>
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">Blender(enjoy)</p>
+              </li>
+            </ul>
+          </div>
+          <div class="line-between-accordion-item"></div>
+        </li>
+        <li class="ac title">
+          <div class="about-me-item-caption-and-button-wrapper">
+            <h3 class="title-about ac-header">Education</h3>
+            <button class="ac-trigger about-button">
+              <svg class="icon-about-me">
+                <use href="../img/icons.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="ac-panel panel-about">
+            <ul class="about-me-accordion-pannel-list">
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">
+                  2018 - 2019 / Frontend Development Diploma, GoIT IT School,
+                  New York
+                </p>
+              </li>
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">
+                  2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                  School, New York
+                </p>
+              </li>
+              <li class="about-me-accordion-pannel-item">
+                <p class="ac-text text-about">
+                  2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="line-between-accordion-item"></div>
+        </li>
+      </ul>
+      <div class="swipper-and-button-wraper">
+        <div class="swiper-wrapper">
+          <ul class="swiper-list">
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">HTML/CSS</p>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">JavaScript</p>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">React</p>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">Node.js</p>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">React Native</p>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide-caston">
+              <div class="swiper-slide-item">
+                <p class="swiper-slide-item-text">Soft skills</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-btn-next">
+          <svg class="icon-next-button" width="40" height="40">
+            <use href="./img/icons.svg#icon-arrow-narrow-right"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

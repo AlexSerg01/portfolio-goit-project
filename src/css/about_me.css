@@ -1,380 +1,425 @@
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .about-me-section {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    display: flex;
-    justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .about-me-description {
-    position: relative;
-    max-width: 343px;
-    height: 500px;
-    border-radius: 24px;
-    background: rgb(36, 37, 39);
+  position: relative;
+  max-width: 343px;
+  height: 500px;
+  border-radius: 24px;
+  background: rgb(36, 37, 39);
 }
 
 .about-me-description-wrapper {
-    position: absolute;
-    max-width: 279px;
-    left: 32px;
-    right: 32px;
-    top: 32px;
-    bottom: 272px;
+  position: absolute;
+  max-width: 279px;
+  left: 32px;
+  right: 32px;
+  top: 32px;
+  bottom: 272px;
 }
 
 .about-me-description-text {
-    font-family: Inter Tight;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.17;
-    letter-spacing: -0.03em;
-    text-align: left;
-    text-transform: uppercase;
+  color: #fafafa;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .accent-red {
-    color: rgb(237, 59, 68);
+  color: rgb(237, 59, 68);
 }
 
 .accent-color {
-    color: rgba(250, 250, 250, 0.4);
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .tumb-picture {
-    margin-top: 16px;
-    border-radius: 24px;
-    overflow: hidden;
-    max-width: 343px;
+  margin-top: 16px;
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 343px;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .list-about {
-    margin-top: 32px;
-    max-width: 343px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0px;
+  margin-top: 32px;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
 }
 
 .about-me-item-caption-and-button-wrapper {
-    max-width: 343px;
-    min-width: 320px;
-    height: 36px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    margin-bottom: 12px;
+  max-width: 343px;
+  min-width: 320px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 12px;
 }
 
 .title .title-about {
-    color: rgba(250, 250, 250, 0.4);
-    font-family: Inter Tight;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.5px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .title .about-button {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 9px;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 100px;
-    background-color: transparent;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 9px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  background-color: transparent;
 }
 
 .icon-about-me {
-    width: 18px;
-    height: 18px;
+  stroke: #fafafa;
+  width: 18px;
+  height: 18px;
 }
 
 .title .panel-about .text-about {
-    color: rgb(250, 250, 250);
-    font-family: Inter Tight;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    text-align: left;
+  color: rgb(250, 250, 250);
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 
 .title.js-enabled .panel-about {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .title.is-active .panel-about {
-    visibility: visible;
+  visibility: visible;
 }
 
 .title.is-active .icon-about-me {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .about-me-accordion-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
 }
 
 .title .panel-about {
-    overflow: hidden;
-    transition-property: height, visibility;
-    transition-timing-function: ease;
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
 }
 
 .about-me-accordion-pannel-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 10px;
 }
 
 .line-between-accordion-item {
-    margin-top: 20px;
-    max-width: 343px;
-    min-width: 320px;
-    border: 1px solid rgba(250, 250, 250, 0.2);
+  margin-top: 20px;
+  max-width: 343px;
+  min-width: 320px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 .about-me-swiper {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .about-me-swiper-wrapper {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .swiper-slide-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 1px solid rgba(250, 250, 250, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 .about-me-swiper-slide-backing {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #ed3b44;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ed3b44;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  z-index: -1;
 }
 
 .swipper-and-button-wraper {
-    margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.swiper-next-button {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: transparent; */
-    border-color: transparent;
-    fill: #3b3b3b;
+.swiper-list {
+  display: flex;
+  flex-direction: row;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.swiper-slide-caston {
+  color: #fafafa;
+  width: auto !important;
+  margin-top: 64px;
+  font-size: 16px;
+}
+
+.icon-next-button {
+  stroke: #3b3b3b;
+  fill: transparent;
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 768px) {
-    .about-me-container-section {
-        margin-left: 32px;
-        margin-right: 32px;
-    }
+  .about-me-container-section {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 
-    .about-me-section {
-        padding-top: 41px;
-        padding-bottom: 48px;
-    }
+  .about-me-section {
+    padding-top: 41px;
+    padding-bottom: 48px;
+  }
 
-    .about-me-description {
-        max-width: 704px;
-        height: 673px;
-        background: rgb(36, 37, 39);
-    }
+  .about-me-description {
+    max-width: 704px;
+    height: 673px;
+    background: rgb(36, 37, 39);
+  }
 
-    .about-me-description-wrapper {
-        max-width: 576px;
-        height: 200px;
-        left: 64px;
-        right: 64px;
-        top: 64px;
-        bottom: 436px;
-    }
+  .about-me-description-wrapper {
+    max-width: 576px;
+    height: 200px;
+    left: 64px;
+    right: 64px;
+    top: 64px;
+    bottom: 436px;
+  }
 
-    .about-me-description-text {
-        font-family: Inter Tight;
-        font-size: 38px;
-        font-weight: 500;
-        line-height: 1.05;
-        letter-spacing: -0.03em;
-        text-align: left;
-        text-transform: uppercase;
-    }
+  .about-me-description-text {
+    font-family: Inter Tight;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-align: left;
+    text-transform: uppercase;
+  }
 
-    .tumb-picture {
-        margin-top: 16px;
-        border-radius: 24px;
-        overflow: hidden;
-        max-width: 704px;
-    }
+  .tumb-picture {
+    margin-top: 16px;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 704px;
+  }
 
-    .list-about {
-        margin-top: 64px;
-        max-width: 704px;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0px;
-    }
+  .list-about {
+    margin-top: 64px;
+    max-width: 704px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+  }
 
-    .about-me-item-caption-and-button-wrapper {
-        max-width: 704px;
-        min-width: 704px;
-        height: 40px;
-        margin-bottom: 8px;
-    }
+  .about-me-item-caption-and-button-wrapper {
+    max-width: 704px;
+    min-width: 704px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
 
-    .title .about-button {
-        width: 40px;
-        height: 40px;
-        padding: 10px;
-    }
+  .title .about-button {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
 
-    .icon-about-me {
-        width: 20px;
-        height: 20px;
-    }
+  .icon-about-me {
+    stroke: #fafafa;
+    width: 20px;
+    height: 20px;
+  }
 
-    .line-between-accordion-item {
-        margin-top: 32px;
-        max-width: 704px;
-        border: 1px solid rgba(250, 250, 250, 0.2);
-    }
+  .line-between-accordion-item {
+    margin-top: 32px;
+    max-width: 704px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+  .swipper-and-button-wraper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .about-me-swiper {
+    margin-top: 64px;
+  } */
 
-    .about-me-swiper {
-        margin-top: 64px;
-    }
+  .swiper-slide-item {
+    width: 200px;
+    height: 200px;
+  }
+  .swiper-list {
+    display: flex !important;
+    flex-direction: row;
+  }
+  .swiper-slide-caston {
+    color: #fafafa;
+    width: auto !important;
+    margin-top: 64px;
+    font-size: 20px;
+  }
 
-    .swiper-slide-item {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-me-swiper-slide-backing {
-        width: 200px;
-        height: 200px;
-    }
+  .icon-next-button {
+    stroke: #3b3b3b;
+    fill: transparent;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .about-me-section {
-        padding-top: 48px;
-        padding-bottom: 82px;
-    }
+  .about-me-section {
+    padding-top: 48px;
+    padding-bottom: 82px;
+  }
 
-    .about-me-description-and-photo-wrapper {
-        display: flex;
-        flex-direction: row;
-        column-gap: 16px;
-    }
+  .about-me-description-and-photo-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
 
-    .about-me-description {
-        border-radius: 24px;
-        background: rgb(36, 37, 39);
-        width: 680px;
-        height: 700px;
-    }
+  .about-me-description {
+    border-radius: 24px;
+    background: rgb(36, 37, 39);
+    width: 680px;
+    height: 700px;
+  }
 
-    .about-me-description-wrapper {
-        max-width: 552px;
-        height: 200px;
-        left: 64px;
-        right: 64px;
-        top: 64px;
-        bottom: 436px;
-    }
+  .about-me-description-wrapper {
+    max-width: 552px;
+    height: 200px;
+    left: 64px;
+    right: 64px;
+    top: 64px;
+    bottom: 436px;
+  }
 
-    .tumb-picture {
-        margin-top: 0;
-        border-radius: 24px;
-        overflow: hidden;
-        max-width: 680px;
-    }
+  .tumb-picture {
+    margin-top: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 680px;
+  }
 
-    .list-about {
-        margin-top: 96px;
-        max-width: 1376px;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0px;
-    }
+  .list-about {
+    margin-top: 96px;
+    max-width: 1376px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+  }
 
-    .about-me-item-caption-and-button-wrapper {
-        max-width: 1376px;
-        min-width: 1376px;
-    }
+  .about-me-item-caption-and-button-wrapper {
+    max-width: 1376px;
+    min-width: 1376px;
+  }
 
-    .panel-about {
-        margin-left: 696px;
-    }
+  .panel-about {
+    padding-left: 696px;
+    padding-right: 64px;
+  }
 
-    .line-between-accordion-item {
-        margin-top: 32px;
-        max-width: 1376px;
-        border: 1px solid rgba(250, 250, 250, 0.2);
-    }
+  .line-between-accordion-item {
+    margin-top: 32px;
+    max-width: 1376px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+  .swipper-and-button-wraper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .about-me-swiper {
-        margin-top: 96px;
-    }
+  .swiper-list {
+    display: flex !important;
+    flex-direction: row;
+  }
 
-    .swiper-slide-item {
-        width: 200px;
-        height: 200px;
-    }
+  .swiper-slide-caston {
+    color: #fafafa;
+    width: auto !important;
+    margin-top: 64px;
+    font-size: 20px;
+  }
 
-    .about-me-swiper-slide-backing {
-        width: 200px;
-        height: 200px;
-    }
+  .icon-next-button {
+    stroke: #3b3b3b;
+    fill: transparent;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+  }
 }

@@ -1,4 +1,8 @@
 import { PostRequest } from './api';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
+const INPUT_LENGTH_BEFORE_CUT = 36;
 
 const wtGlobalRefs = {
   wtCoopForm: document.querySelector('#WtForm'),
@@ -34,14 +38,20 @@ window.addEventListener('keydown', closeWtModal);
 
 async function sendWtUserData(e) {
   e.preventDefault();
-  wtGlobalRefs.wtResultMsg.textContent = '';
   try {
     const { email, comment } = wtGlobalRefs.wtCoopForm.elements;
     const data = await PostRequest(email.value, comment.value);
     openWtModal(data);
-    showSuccess();
     wtGlobalRefs.wtCoopForm.reset();
-  } catch (err) {}
+    email.classList.remove('Invalid');
+    email.classList.remove('Success');
+    wtGlobalRefs.wtResultMsg.textContent = '';
+  } catch (err) {
+    iziToast.error({
+      message: 'Something went wrong! Please, try again.',
+      position: 'bottomCenter',
+    });
+  }
 }
 
 function openWtModal({ title, message }) {
@@ -65,7 +75,7 @@ function emailValidator(e) {
   e.target.value = e.target.value.trim();
   const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   if (!e.target.value) {
-    resetValidation();
+    resetValidation(e);
     return;
   }
   if (e.target.value.match(pattern)) {
@@ -102,9 +112,12 @@ function resetValidation(e) {
 }
 
 function inputCutString(e) {
+  console.log(e.target.value.length);
   e.target.setAttribute('data-value', e.target.value.trim());
-  if (e.target.value.length > 15) {
-    e.target.value = e.target.value.slice(0, 16).concat('...');
+  if (e.target.value.length > INPUT_LENGTH_BEFORE_CUT) {
+    e.target.value = e.target.value
+      .slice(0, INPUT_LENGTH_BEFORE_CUT - 3)
+      .concat('...');
   }
 }
 

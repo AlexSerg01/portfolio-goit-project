@@ -6,5 +6,5 @@ import './js/projects';
 import './js/faq';
 import './js/covers';
 import './js/reviews';
-import './js/work_tougether';
+import './js/work_together';
 import './js/modal';

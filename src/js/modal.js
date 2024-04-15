@@ -15,9 +15,9 @@ const SECTIONS = {
 
 // =============================================================
 
-OPEN_BTN.addEventListener("click", doOpenMenu)
-CLOSE_BTN.addEventListener("click", doCloseModal)
-MOB_MENU_LINKS.addEventListener("click", doLinkDIrect)
+OPEN_BTN.addEventListener("pointerdown", doOpenMenu)
+CLOSE_BTN.addEventListener("pointerdown", doCloseModal)
+MOB_MENU_LINKS.addEventListener("pointerdown", doLinkDIrect)
 
 // =============================================================
 

@@ -112,10 +112,10 @@
     }
 }
 
-/* Десктоп (з 1280px) */
-@media screen and (min-width: 1280px) {
+/* Десктоп (з 1440px) */
+@media screen and (min-width: 1440px) {
     .benefits {
-        max-width: 1280px;
+        max-width: 1440px;
         margin: 0 auto;
         display: block;
         position: relative;       
@@ -126,7 +126,7 @@
     }
 
     .benefitsBlokList{
-        padding-left: 534px;
+        padding-left: 694px;
     }
 
         .benefitsUl {

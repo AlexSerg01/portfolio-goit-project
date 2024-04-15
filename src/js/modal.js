@@ -27,6 +27,7 @@
 const MODAL = document.querySelector(".ModalMenu")
 const OPEN_BTN = document.querySelector("#openModal")
 const CLOSE_BTN = document.querySelector(".CloseModalBtn")
+const BODY = document.querySelector("body")
 
 OPEN_BTN.addEventListener("click", doOpenMenu)
 CLOSE_BTN.addEventListener("click", doCloseModal)
@@ -34,9 +35,10 @@ CLOSE_BTN.addEventListener("click", doCloseModal)
 
 function doOpenMenu() {
   MODAL.classList.add("ModalOpen")
+  BODY.classList.add("ModalBodyLock")
 }
 
 function doCloseModal() {
   MODAL.classList.remove("ModalOpen")
-  console.log("hi")
+  BODY.classList.remove("ModalBodyLock")
 }

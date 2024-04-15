@@ -12,6 +12,10 @@
     display: block;
 }
 
+.ModalBodyLock {
+    overflow: hidden;
+}
+
 .Menu {
     display: flex;
     flex-direction: column;
@@ -23,6 +27,8 @@
 .MenuItem {
     color: white;
     margin: 10px 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .OrderButton {
     background-color: #ED3B44;
@@ -42,7 +48,7 @@
     stroke: rgb(250, 250, 250);
     position: absolute;
     top: 39px;
-    right: 23px;
+    right: 40px;
     background-color: transparent;
     height: 32px;
     width: 32px;

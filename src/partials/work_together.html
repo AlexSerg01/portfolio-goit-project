@@ -1,0 +1,78 @@
+<footer id="WorkTogether" class="WorkTogetherSection">
+  <div class="container">
+    <picture class="WorkTogetherPhoto">
+      <source
+        srcset="
+          ./img/work-together-img/photo.png    1x,
+          ./img/work-together-img/photo@2x.png 2x
+        "
+      />
+      <img src="./img/work-together-img/photo.png" alt="photo of the person" />
+    </picture>
+    <h2 class="WorkTogetherTitle">
+      Let’s <span class="WorkWord">work </span
+      ><span class="NewLine">together</span>
+    </h2>
+    <form id="WtForm" class="CoopForm" autocomplete="off">
+      <ul class="CoopInputGroup">
+        <li class="CoopInputItem">
+          <input
+            class="CoopInput"
+            type="email"
+            name="email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            placeholder="clients@gmail.com"
+            required
+          />
+          <p class="CoopResultMsg"></p>
+        </li>
+        <li class="CoopInputItem">
+          <input
+            class="CoopInput"
+            type="text"
+            name="comment"
+            pattern="[\S\s]+[\S]+"
+            placeholder="comments"
+            data-value
+            required
+          />
+        </li>
+      </ul>
+      <button class="CoopSubmitBtn" type="submit">Send</button>
+    </form>
+    <ul class="ContactsList">
+      <li class="ContactItem">
+        <a class="ContactLink" href="mailto:lloydjefferson@gmail.com">
+          lloydjefferson@gmail.com
+        </a>
+      </li>
+      <li class="ContactItem">
+        <a class="ContactLink" href="tel:+3801111111111">+380 11 1111 11 11</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+<div class="WorkTogetherModalWrapper">
+  <div class="container WorkTogetherModalContainer">
+    <div class="WorkTogetherModal">
+      <button class="WorkTogetherModalClose" type="button">
+        <svg
+          class="WorkTogetherCloseIcon"
+          width="22"
+          height="22"
+          aria-label="close"
+        >
+          <use href="./img/icons.svg#icon-close-x"></use>
+        </svg>
+      </button>
+      <ul class="WorkTogetherModalList">
+        <li class="WorkTogetherModalTitle">
+          <h2 id="WtModalRespTitle"></h2>
+        </li>
+        <li class="WorkTogetherModalText">
+          <p id="WtModalRespMessage"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

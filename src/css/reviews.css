@@ -1,34 +1,90 @@
 /* Стилі для мобільних пристроїв тут */
-.section-reviews {
-  max-width: 343px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-.arrow-nav {
-  width: 156px;
-  height: 68px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+.TitleText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 32px;
 }
 
-.swiper-button-prev {
+.ButtonPrev {
   display: flex;
   padding: 14px;
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
+  fill: transparent;
+  stroke: #fafafa;
   transform: rotate(180deg);
 }
-.swiper-button-next {
+.ButtonNext {
   display: flex;
   padding: 14px;
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
+  fill: transparent;
+  stroke: #fafafa;
 }
+
+/* reviews  */
+
+
+#reviewsList {
+  display: flex;
+  flex-wrap: nowrap; /* Забороняємо переносити елементи на новий рядок */
+  gap: 16px;
+  justify-content: flex-start;
+  max-width: 100%;
+  
+}
+/* Картка відгуків */
+.Review {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  flex-basis: calc((100% - 0px) / 1);
+}
+
+
+.UserIcon {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+}
+.Name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  padding-bottom: 8px;
+  padding-top: 32px;
+}
+.ReviewText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  height: 188px;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+/* Картка відгуків ================*/
+
 @media screen and (max-width: 767px) {
-  .container {
+  .ArrowNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .Section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .Container {
     max-width: 375px;
     margin: 0 auto;
     padding: 0 15px;
@@ -37,18 +93,83 @@
 
 /* Планшети (з 768px) */
 @media screen and (min-width: 768px) {
-  .container {
+  .ArrowNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .Section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .Container {
     max-width: 768px;
     margin: 0 auto;
     padding: 0 15px;
   }
+
+    #reviewsList {
+     gap: 16px;
+  
+    }
+    .Review {
+      border: 1px solid rgba(250, 250, 250, 0.2);
+      border-radius: 20px;
+      padding: 32px 24px;
+      flex-basis: 360px;
+      display: flex;
+        flex-direction: column;
+      /* Відключаємо зміщення відгуків, щоб вони не змінювали ширину */
+    }
+
 }
 
-/* Десктоп (з 1280px) */
-@media screen and (min-width: 1280px) {
-  .container {
+/* Десктоп (з 1440px) */
+@media screen and (min-width: 1440px) {
+  .ArrowNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .Section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+  .Container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 15px;
   }
+
+    #reviewsList {
+      gap: 16px;
+  
+    }
+
+  .Review {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc((100% - 48px) / 4);
+}
+.ButtonNext:hover,
+.ButtonPrev:hover {
+  stroke: rgb(59, 59, 59);
+}
+    
+}
+
+
+/* disabled btn */
+
+.BtnOff {
+  stroke: rgba(250, 250, 250, 0.2);
+  border-color: rgba(250, 250, 250, 0.2);
+}
+
+.SocialIconBack, .SocialIconNext {
+  stroke: inherit;
 }

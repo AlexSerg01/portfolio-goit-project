@@ -22,7 +22,7 @@
     <script type="module" crossorigin src="/portfolio-goit-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/portfolio-goit-project/assets/vendor-8a147555.js">
     <link rel="stylesheet" href="/portfolio-goit-project/assets/vendor-0e736569.css">
-    <link rel="stylesheet" href="/portfolio-goit-project/assets/index-1f7609af.css">
+    <link rel="stylesheet" href="/portfolio-goit-project/assets/index-2468552c.css">
   </head>
   <body>
     <header class="page-header">
@@ -56,7 +56,7 @@
       </ul>
     </nav>
     <a href="#WorkTogether" class="header-order-link"> Order the project </a>
-    <button class="header-burger-button" type="button">
+    <button id="openModal" class="header-burger-button" type="button">
       <svg class="header-burger-vector" width="28" height="28">
         <use href="/portfolio-goit-project/assets/icons-ef1f10ff.svg#icon-menu-burger"></use>
       </svg>
@@ -867,12 +867,19 @@
   </div>
 </section>
 
-      <div class="menu">
-  <p class="menu-item">About me</p>
-  <p class="menu-item">Benefits</p>
-  <p class="menu-item">Projects</p>
-  <p class="menu-item">FAQ</p>
-  <button class="order-button">Order the project</button>
+      <div class="ModalMenu">
+  <button class="CloseModalBtn">
+    <svg class="IconCloseModal" width="32" height="32">
+      <use href="/portfolio-goit-project/assets/icons-ef1f10ff.svg#icon-close-x"></use>
+    </svg>
+  </button>
+  <div class="Menu">
+    <p class="MenuItem">About me</p>
+    <p class="MenuItem">Benefits</p>
+    <p class="MenuItem">Projects</p>
+    <p class="MenuItem">FAQ</p>
+    <button class="OrderButton">Order the project</button>
+  </div>
 </div>
 
     </main>

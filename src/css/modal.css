@@ -1,0 +1,25 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(to right, #ED3B44, #000000);
+}
+.menu-item {
+    color: white;
+    margin: 10px 0;
+}
+.order-button {
+    background-color: #ED3B44;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+}

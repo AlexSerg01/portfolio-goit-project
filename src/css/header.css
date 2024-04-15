@@ -22,7 +22,7 @@
 
 /* WHOSE CODE UP ABOVE??? */
 
-.page-header {
+.PageHeader {
   position: absolute;
   top: 32px;
   display: flex;
@@ -32,20 +32,20 @@
   padding: 0 15px;
 }
 
-.header-wrapper {
+.HeaderWrapper {
   display: flex;
   justify-content: space-between;
   width: 343px;
   min-height: 80px;
 }
 
-.header-logo {
+.HeaderLogo {
   display: flex;
   justify-content: space-between;
   gap: 8px;
 }
 
-.header-logo-text {
+.HeaderLogoText {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .header-burger-button {
+  .HeaderBurgerButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,39 +65,39 @@
     width: 28px;
   }
 
-  .header-burger-vector {
+  .HeaderBurgerVector {
     stroke: #fafafa;
   }
 }
 
-.header-navigation {
+.HeaderNavigation {
   display: none;
 }
 
-.header-order-link {
+.HeaderOrderLink {
   display: none;
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-  .header-burger-button {
+  .HeaderBurgerButton {
     display: none;
   }
 
-  .page-header {
+  .PageHeader {
     padding: 0 32px;
   }
 
-  .header-wrapper {
+  .HeaderWrapper {
     width: 704px;
   }
 
-  .header-navigation {
+  .HeaderNavigation {
     position: relative;
     display: flex;
   }
 
-  .header-menu-button {
+  .HeaderMenuButton {
     display: flex;
     width: 67px;
     height: 39px;
@@ -116,11 +116,11 @@
     transition: color 250ms ease;
   }
 
-  .header-menu-list {
+  .HeaderMenuList {
     display: none;
   }
 
-  .menu-is-visible {
+  .MenuIsVisible {
     display: flex;
     position: absolute;
     top: 47px;
@@ -140,7 +140,7 @@
     }
   }
 
-  .header-menu-link {
+  .HeaderMenuLink {
     font-family: 'Inter Tight', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -149,7 +149,7 @@
     transition: color 250ms ease;
   }
 
-  .header-order-link {
+  .HeaderOrderLink {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,17 +165,17 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .header-wrapper {
+  .HeaderWrapper {
     width: 1376px;
   }
 
-  .header-menu-button:hover,
-  .header-menu-link:hover,
-  .header-menu-link:focus {
+  .HeaderMenuButton:hover,
+  .HeaderMenuLink:hover,
+  .HeaderMenuLink:focus {
     color: #ed3b44;
   }
 
-  .header-order-link:hover {
+  .HeaderOrderLink:hover {
     background-color: #e0373f;
   }
 }

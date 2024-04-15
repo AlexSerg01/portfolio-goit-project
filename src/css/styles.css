@@ -1,9 +1,10 @@
-/**
+/*
   |============================
   | include css partials with
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
@@ -55,4 +56,8 @@
     margin: 0 auto;
     padding: 0 32px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

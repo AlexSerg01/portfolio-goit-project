@@ -1,16 +1,42 @@
-.menu {
+.ModalMenu {
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    /* right: 0; */
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/modal/modal-bg.png);
+    z-index: 999;
+    opacity: 0;
+    transition: top 350ms ease-in-out, right 350ms ease-in-out, opacity 350ms ease-in-out;
+}
+
+.Open {
+top: 0;
+    right: 0;
+    opacity: 1;
+    
+}
+
+.ModalBodyLock {
+    overflow: hidden;
+}
+
+.Menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: linear-gradient(to right, #ED3B44, #000000);
+    /* background: linear-gradient(to right, #ED3B44, #000000); */
 }
-.menu-item {
+.MenuItem {
     color: white;
     margin: 10px 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
-.order-button {
+.OrderButton {
     background-color: #ED3B44;
     border: none;
     color: white;
@@ -23,3 +49,23 @@
     cursor: pointer;
     border-radius: 50px;
 }
+
+.CloseModalBtn {
+    stroke: rgb(250, 250, 250);
+    position: absolute;
+    top: 39px;
+    right: 40px;
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    outline: transparent;
+    border: 1px solid transparent;
+}
+
+  @media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+      .ModalMenu {
+        background-image: url(../img/modal/modal-bg@2x.png);
+      }
+  }

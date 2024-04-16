@@ -37,7 +37,7 @@ function doLinkDIrect(event) {
   }
   if (event.target.classList.contains("AboutMe")) {
     doCloseModal()
-    SECTIONS.aboutMe.scrollIntoView({behavior: "smooth"})
+    SECTIONS.aboutMe.scrollIntoView({ behavior: "smooth" })
   } else if (event.target.classList.contains("Benefits")) {
     doCloseModal()
     SECTIONS.benefits.scrollIntoView({behavior: "smooth"})

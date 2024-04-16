@@ -29,7 +29,7 @@ const SWIPER = new Swiper('.reviews-swiper', {
     nextEl: '.ButtonNext',
     prevEl: '.ButtonPrev',
   },
-  mousewheel: true,
+  // mousewheel: true,
   keyboard: true,
   touch: true,
   });

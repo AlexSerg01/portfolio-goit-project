@@ -45,6 +45,7 @@
   border-radius: 20px;
   padding: 32px 24px;
   flex-basis: calc((100% - 0px) / 1);
+  margin-right: 0;
 }
 
 

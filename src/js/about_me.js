@@ -1,51 +1,41 @@
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import Swiper from 'swiper';
-import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-const aboutMeSwiperBox = document.querySelector(
-  '.swipper-and-button-wraper > .swiper'
-);
-const aboutMeNextButton = document.querySelector('.swiper-btn-next');
-
-const swiper = new Swiper(aboutMeSwiperBox, {
-  modules: [Navigation, Pagination, Keyboard],
+const swiperAbout = new Swiper('.about-swiper-container', {
   loop: true,
-
+  setWrapperSize: true,
+  modules: [Navigation, Keyboard, Mousewheel],
+  spaceBetween: 0,
+  simulateTouch: true,
+  grabCursor: true,
+  slideActiveClass: 'active',
   navigation: {
-    nextEl: aboutMeNextButton,
+    nextEl: '.about-swiper-button',
   },
-  // centeredSlides: true,
-  // watchOverflow: true,
+  // mousewheel: {
+  //   invert: true,
+  // },
   keyboard: {
     enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
+    onlyInViewport: false,
   },
   breakpoints: {
-    375: {
-      slidesPerView: 'auto',
-      // spaceBetween: 18,
+    320: {
+      slidesPerView: 2,
     },
-    767: {
-      slidesPerView: 'auto',
-      // spaceBetween: 16,
+    375: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
     },
     1440: {
-      slidesPerView: 'auto',
-      // spaceBetween: 16,
+      slidesPerView: 6,
     },
   },
-  slidesPerView: 'auto',
 });
-import Accordion from 'accordion-js';
-
-const accordionButtonTrigger = document.querySelector('.ac-trigger');
-
-new Accordion('.accordion-container', {
-  duration: 600,
-  collapse: true,
-  openOnInit: [0],
-  showMultiple: true,
+document.querySelector('.about-swiper-button').addEventListener('click', () => {
+  swiperAbout.slideNext();
 });

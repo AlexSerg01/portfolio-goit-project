@@ -16,32 +16,28 @@ const swiper = new Swiper(aboutMeSwiperBox, {
   navigation: {
     nextEl: aboutMeNextButton,
   },
-  centeredSlides: true,
-  watchOverflow: true,
+  // centeredSlides: true,
+  // watchOverflow: true,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
   },
   breakpoints: {
-    320: {
+    375: {
       slidesPerView: 'auto',
-      spaceBetween: 18,
+      // spaceBetween: 18,
     },
     767: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    1280: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+      slidesPerView: 'auto',
+      // spaceBetween: 16,
     },
     1440: {
       slidesPerView: 'auto',
-      spaceBetween: 16,
+      // spaceBetween: 16,
     },
   },
-  slidesPerView: 2,
+  slidesPerView: 'auto',
 });
 import Accordion from 'accordion-js';
 

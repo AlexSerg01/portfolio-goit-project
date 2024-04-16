@@ -6,7 +6,7 @@ import 'swiper/css/bundle';
 
 new Swiper('.swiper', {
   // Optional parameters
-  cssMode: true,
+  cssMode: false,
   spaceBetween: 30,
 
   // Navigation arrows
@@ -14,7 +14,7 @@ new Swiper('.swiper', {
     nextEl: '.SwButtonNext',
     prevEl: '.SwButtonPrev',
   },
-  mousewheel: true,
+  mousewheel: false,
   keyboard: true,
   touch: true,
 });

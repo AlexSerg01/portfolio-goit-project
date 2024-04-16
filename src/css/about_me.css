@@ -384,6 +384,13 @@
     margin-top: 64px;
     font-size: 20px;
   }
+
+  .swiper-slide-caston.active {
+    background-color: #ed3b44;
+    border: #ed3b44;
+    border-radius: 50%;
+  }
+
   .icon-next-button {
     stroke: #3b3b3b;
     fill: transparent;

@@ -1,7 +1,6 @@
 .HeroSection {
   background-repeat: no-repeat;
   background-image: url(../img/hero-bg/mobile-hero.png);
-  max-width: 375px;
   margin: 0 auto;
 }
 
@@ -69,7 +68,6 @@
 @media screen and (min-width: 768px) {
   .HeroSection {
     background-image: url(../img/hero-bg/tablet-hero.png);
-    max-width: 768px;
   }
 
   @media screen and (min-resolution: 192dpi),
@@ -117,7 +115,6 @@
 @media screen and (min-width: 1440px) {
   .HeroSection {
     background-image: url(../img/hero-bg/desktop-hero.png);
-    max-width: 1440px;
   }
 
   @media screen and (min-resolution: 192dpi),

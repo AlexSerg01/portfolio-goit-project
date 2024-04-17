@@ -137,7 +137,7 @@
 .line-between-accordion-item {
   margin-top: 20px;
   max-width: 343px;
-  min-width: 320px;
+  min-width: 343px;
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 .about-me-swiper {
@@ -213,6 +213,41 @@
   width: 40px;
   height: 40px;
 }
+
+@media screen and (max-width: 374px) {
+  .about-me-container-section {
+    width: 310px;
+    padding-right: 15px;
+    /* padding-left: 15px; */
+  }
+  .about-me-section {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  .about-me-item-caption-and-button-wrapper {
+    padding-right: 15px;
+  }
+ 
+  .line-between-accordion-item {
+    max-width: 310px;
+      min-width: 310px;
+  }
+    .swiper-slide-item {
+      width: 120px;
+      height: 120px;
+    }
+  .swiper-slide {
+    margin-right: 15px !important;
+  }
+  .text-about {
+    padding-right: 15px;
+  }
+
+    
+}
+
+
 @media screen and (min-width: 768px) {
   .about-me-container-section {
     margin-left: 32px;

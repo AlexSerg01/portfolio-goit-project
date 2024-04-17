@@ -5,9 +5,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const swiperAbout = new Swiper('.about-swiper-container', {
   loop: true,
+  slidesPerGroup: 1,
   setWrapperSize: true,
   modules: [Navigation, Keyboard, Mousewheel],
-  spaceBetween: 0,
   simulateTouch: true,
   grabCursor: true,
   slideActiveClass: 'active',
@@ -24,15 +24,19 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   breakpoints: {
     320: {
       slidesPerView: 2,
+      spaceBetween: 10,
     },
     375: {
       slidesPerView: 2,
+      spaceBetween: 15,
     },
     768: {
       slidesPerView: 3,
+      spaceBetween: 35,
     },
     1440: {
       slidesPerView: 6,
+      spaceBetween: 10,
     },
   },
 });

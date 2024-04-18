@@ -197,10 +197,16 @@
   /* padding-left: 32px; */
   /* padding-right: 32px; */
 }
-.swiper-list > :first-child {
+/* .swiper-list > :first-child {
   border-radius: 50%;
   background-color: #ed3b44;
+} */
+
+.swiper-slide-caston.active {
+  border-radius: 50%;
+    background-color: #ed3b44;
 }
+
 .swiper-slide-caston {
   color: #fafafa;
   width: auto !important;
